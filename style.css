@@ -1,7 +1,56 @@
+body {
+  background: url("assets/images/background.jpg") center top no-repeat fixed;
+}
+main {
+  background: inherit;
+}
+
+/* Avatar */
+img#avatar {
+  margin-left: -20px;
+  border-radius: 50%;
+  width: 170px;
+  transition: opacity 3s ease;
+}
+.avatar-disappear {
+  opacity: 0;
+}
+.avatar-opacity {
+  opacity: 0.6;
+}
+
+/* Page background */
+.page {
+  transition: background 1s ease, opacity 2s ease;
+}
+.background-appear {
+  opacity: 0;
+}
+.page-opacity {
+  background-color: rgba(100%, 100%, 100%, 0.5);
+}
+
+/* Resume border */
+.page[style^="border-color"]:before {
+  transition: opacity 1s ease;
+}
+.background-appear[style^="border-color"]:before,
+.page-opacity[style^="border-color"]:before {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
 /* Contacts */
 .contacts li a.twitter:hover {
   color: #1DA1F2;
 }
 .contacts li a.instagram:hover {
   color: #5F4EC8;
+}
+
+/* Media */
+@media only screen and (max-width: 991px) and (min-width: 767px){
+  img#avatar {
+    margin-left: -20px;
+    width: 120px;
 }
